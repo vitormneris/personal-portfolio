@@ -1,41 +1,37 @@
-import { Animated, Pressable, Text, TouchableOpacity, View } from "react-native"
+import { Image, Text, View } from "react-native"
+import { Fontisto, Entypo, FontAwesome5, Octicons } from '@expo/vector-icons';
+
+import { ScaleOnHoverComp } from "../ScaleOnHoverComp"
+
 import { styles } from "./style"
-import { useRef } from "react";
+import { ReactNode } from "react";
 
 export const NavbarComp = () => {
     return (
         <View style={styles.container}>
-            <NavButton text="Quem eu sou" />
-            <NavButton text="Minhas habilidades" />
-            <NavButton text="Projetos" />
+            <Image source={require("../../assets/images/my_logo.png")} style={{width: 170, height: 80}} />
+            <View style={{display: 'flex', flexDirection: 'row'}}>
+                <NavButton text="Início" children={<Octicons name="home-fill" size={18} color="#fff" />} />
+                <NavButton text="Me conheça" children={<Fontisto name="person" size={18} color="#fff" />} />
+                <NavButton text="Minhas habilidades" children={<Entypo name="tools" size={18} color="#fff" />}  />
+                <NavButton text="Projetos" children={<FontAwesome5 name="drafting-compass" size={18} color="#fff" />}  />
+            </View>
         </View>
     )
 }
 
 type NavButtonProps = {
-    text: string
+    text: string,
+    children: ReactNode
 }
 
-export const NavButton = ({ text }: NavButtonProps) => {
-    const scale = useRef(new Animated.Value(1)).current;
-
-    const animateTo = (value: number) => {
-        Animated.spring(scale, {
-            toValue: value,
-            useNativeDriver: true,
-        }).start();
-    };
-
+const NavButton = ({ text, children }: NavButtonProps) => {
     return (
-        <Pressable
-            onHoverIn={() => animateTo(1.1)}
-            onHoverOut={() => animateTo(1)}
-            onPressIn={() => animateTo(0.95)}
-            onPressOut={() => animateTo(1)}
-        >
-            <Animated.View style={[styles.button, { transform: [{ scale }] }]}>
-                <Text style={styles.text_button}>{text}</Text>
-            </Animated.View>
-        </Pressable>
+        <ScaleOnHoverComp isPressable={true}>
+            <View style={styles.button}>
+                 {children} <Text style={styles.text_button}>{text}</Text> 
+            </View>
+        </ScaleOnHoverComp>
+
     )
 }

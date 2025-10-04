@@ -12,33 +12,49 @@ export const styles = StyleSheet.create({
 		width: '100%'
 	},
 
-	container_who_iam: {
+	container_home: {
 		display: "flex",
 		flexDirection: "row",
-		backgroundColor: '#a3ff72ff',
 		justifyContent: 'center',
 		width: '100%',
-		paddingVertical: 80
+		paddingVertical: 120
 	},
 
 	container_my_skills: {
 		display: 'flex',
-		backgroundColor: '#72ffeaff',
-		alignItems: 'center'
+		alignItems: 'center',
+		paddingVertical: 120
 	},
 
 	container_skills: { 
 		display: 'flex', 
 		flexDirection: 'row', 
-		width: 900, 
+		width: 1200, 
 		flexWrap: 'wrap' 
 	},
 
 	container_my_interdisciplinary_project: {
 		display: 'flex',
 		alignItems: 'center',
-		margin: 30
 	},	
+
+	container_text: { 
+		display: 'flex', 
+		flexDirection: 'column', 
+		marginHorizontal: 80, 
+		justifyContent: 'center' 
+	},
+
+	container_who_iam: {
+		alignItems: 'center'
+	},
+
+	container_carousel: { 
+		display: 'flex', 
+		flexDirection: 'row', 
+		flexWrap: 'wrap',
+		width: 1300
+	},
 
 	image: {
 		width: 500,
@@ -46,12 +62,30 @@ export const styles = StyleSheet.create({
 		borderTopEndRadius: 160,
 		borderTopStartRadius: 30,
 		borderBottomStartRadius: 160,
-		borderBottomEndRadius: 30
+		borderBottomEndRadius: 30,
+		boxShadow: '6px 10px 12px rgba(0, 0, 0, 0.5)', 
 	},
 
 	icon_tech: {
 		width: 100,
 		height: 100,
-		margin: 20
-	}
+		margin: 20,
+	},
+
+	icon_contact: {
+		width: 50,
+		height: 50,
+		margin: 20,
+	},
+
+	paragraph: { 
+		width: 1200, 
+		textAlign: 'justify', 
+		color: '#000000', 
+		fontSize: 20, 
+		fontFamily: 'Montserrat', 
+		margin: 5 
+	},
+
+
 });
