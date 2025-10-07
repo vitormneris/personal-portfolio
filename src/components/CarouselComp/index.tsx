@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dimensions, Image, ImageSourcePropType, Text, View } from "react-native";
+import { Dimensions, Image, ImageSourcePropType, Pressable, Text, TouchableOpacity, View } from "react-native";
 import { useSharedValue } from "react-native-reanimated";
 import { Octicons } from '@expo/vector-icons';
 import Carousel, {
@@ -19,7 +19,12 @@ type CarouselCompProps = {
     data: ImageSourcePropType[],
     title: string,
     description: string,
-    links: string[]
+    links: Link[]
+}
+
+export type Link = {
+    text: string,
+    action: () => void
 }
 
 export const CarouselComp = ({ data, title, description, links }: CarouselCompProps) => {
@@ -44,7 +49,7 @@ export const CarouselComp = ({ data, title, description, links }: CarouselCompPr
                 renderItem={({ index, item }) => (
                     <View style={styles.container_image}>
                         <ScaleOnHoverComp>
-                            <Image source={item} style={styles.image} />
+                            <Image source={item} style={styles.image} resizeMode="contain" />
                         </ScaleOnHoverComp>
                     </View>
                 )}
@@ -62,10 +67,12 @@ export const CarouselComp = ({ data, title, description, links }: CarouselCompPr
                 <Text style={styles.info_title}>{title}</Text>
                 <Text style={styles.info_description}> {description}</Text>
 
-                {links.map((value: string) => (
-                    <Text style={styles.info_link}>
-                        <Octicons name="dot-fill" size={12} color="#000" /> {value}
-                    </Text>
+                {links.map(({ text, action }: Link) => (
+                    <ScaleOnHoverComp isPressable={true}>
+                        <Text style={styles.info_link} onPress={action}>
+                            <Octicons name="dot-fill" size={12} color="#000" /> {text}
+                        </Text>
+                    </ScaleOnHoverComp>
                 ))}
             </View>
         </View>

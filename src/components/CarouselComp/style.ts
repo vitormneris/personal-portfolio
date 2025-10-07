@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         borderRadius: 40,
         backgroundColor: '#f4f4f4ff',
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.5)', 
-        width: 600
+        width: 600,
     },
 
     container_info: { 
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
         display: 'flex', 
         alignSelf: 'center',
         borderRadius: 20,
-        backgroundColor: '#faff73ff',        
+        width: 570,
     },
 
     pagination_container: { 

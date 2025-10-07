@@ -10,6 +10,16 @@ export const styles = StyleSheet.create({
 		boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.2)', 
     },
 
+    container_buttons: {
+        display: 'flex', 
+        flexDirection: 'row'
+    },
+
+    logo: {
+        width: 170, 
+        height: 80
+    },
+
     button: {
         display: 'flex',
         flexDirection: 'row',

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
 	container: {
@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
 	},
 
 	container_home: {
+    	minHeight: Dimensions.get('window').height,
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: 'center',
@@ -21,39 +22,68 @@ export const styles = StyleSheet.create({
 	},
 
 	container_my_skills: {
+		minHeight: Dimensions.get('window').height,
 		display: 'flex',
 		alignItems: 'center',
-		paddingVertical: 120
+		paddingBottom: 120
 	},
 
-	container_skills: { 
-		display: 'flex', 
-		flexDirection: 'row', 
-		width: 1200, 
-		flexWrap: 'wrap' 
+	container_skills: {
+		display: 'flex',
+		flexDirection: 'row',
+		width: 1200,
+		flexWrap: 'wrap'
 	},
 
 	container_my_interdisciplinary_project: {
 		display: 'flex',
 		alignItems: 'center',
-	},	
+	},
 
-	container_text: { 
-		display: 'flex', 
-		flexDirection: 'column', 
-		marginHorizontal: 80, 
-		justifyContent: 'center' 
+	container_text: {
+		display: 'flex',
+		flexDirection: 'column',
+		marginHorizontal: 80,
+		justifyContent: 'center'
 	},
 
 	container_who_iam: {
-		alignItems: 'center'
+		minHeight: Dimensions.get('window').height,
+		alignItems: 'center',
+		paddingBottom: 100
 	},
 
-	container_carousel: { 
-		display: 'flex', 
-		flexDirection: 'row', 
+	container_carousel: {
+		display: 'flex',
+		flexDirection: 'row',
 		flexWrap: 'wrap',
 		width: 1300
+	},
+
+	container_contact: {
+		display: 'flex',
+		flexDirection: 'row'
+	},
+
+	text_first_part: { 
+		color: '#f59061ff', 
+		fontSize: 70, 
+		fontFamily: 'Montserrat' 
+	},
+	
+	text_second_part: { 
+		color: '#6787f1ff', 
+		fontSize: 120, 
+		fontFamily: 'Montserrat', 
+		fontWeight: '500' 
+	},
+
+	text_third_part: { 
+		width: 600, 
+		textAlign: 'justify', 
+		color: '#000000', 
+		fontSize: 20, 
+		fontFamily: 'Montserrat' 
 	},
 
 	image: {
@@ -63,7 +93,7 @@ export const styles = StyleSheet.create({
 		borderTopStartRadius: 30,
 		borderBottomStartRadius: 160,
 		borderBottomEndRadius: 30,
-		boxShadow: '6px 10px 12px rgba(0, 0, 0, 0.5)', 
+		boxShadow: '6px 10px 12px rgba(0, 0, 0, 0.5)',
 	},
 
 	icon_tech: {
@@ -78,13 +108,13 @@ export const styles = StyleSheet.create({
 		margin: 20,
 	},
 
-	paragraph: { 
-		width: 1200, 
-		textAlign: 'justify', 
-		color: '#000000', 
-		fontSize: 20, 
-		fontFamily: 'Montserrat', 
-		margin: 5 
+	paragraph: {
+		width: 1200,
+		textAlign: 'justify',
+		color: '#000000',
+		fontSize: 20,
+		fontFamily: 'Montserrat',
+		margin: 5
 	},
 
 

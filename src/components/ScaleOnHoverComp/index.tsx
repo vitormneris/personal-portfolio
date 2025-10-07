@@ -4,10 +4,11 @@ import { Animated, Pressable } from "react-native";
 type ScaleOnHoverProps = {
     children: ReactNode,
     isPressable?: boolean,
-    highZoom?: boolean
+    highZoom?: boolean,
+    onPress?: () => void
 }
 
-export const ScaleOnHoverComp = ({ children, isPressable=false, highZoom=false }: ScaleOnHoverProps) => {
+export const ScaleOnHoverComp = ({ children, isPressable=false, highZoom=false, onPress=() => {}}: ScaleOnHoverProps) => {
     const scale = useRef(new Animated.Value(1)).current;
 
     const animateTo = (value: number) => {
@@ -33,6 +34,7 @@ export const ScaleOnHoverComp = ({ children, isPressable=false, highZoom=false }
             onHoverOut={() => animateTo(1)}
             onPressIn={onPressInValue}
             onPressOut={onPressOutValue}
+            onPress={(() => onPress())}
         >
             <Animated.View style={{ transform: [{ scale }] }}>
                 {children}
