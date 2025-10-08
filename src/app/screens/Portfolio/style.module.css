@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+}
+
+.scroll_view {
+  width: 100%;
+}
+
+.container_home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to bottom right, #ffffff, #b3a9ff);
+}
+
+.container_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-right: 80px;
+  justify-content: center;
+}
+
+.text_first_part {
+  color: #f59061ff;
+  font-size: 70px;
+  font-family: 'Montserrat';
+}
+
+.text_second_part {
+  color: #6787f1ff;
+  font-size: 120px;
+  font-family: 'Montserrat';
+  font-weight: 500
+}
+
+.text_third_part {
+  max-width: 600px;
+  text-align: justify;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Montserrat'
+}
+
+.image {
+  width: auto;
+  height: 550px;
+  border-radius: 160px 30px 160px 30px;
+  box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.container_who_iam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container_paragraph {
+  width: 70%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.paragraph {
+  text-align: justify;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Montserrat';
+}
+
+.container_my_skills {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ffffff, #b3a9ff);
+}
+
+.container_skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.icon_tech {
+  width: auto;
+  height: 100px;
+  transition: all 0.2s ease-in-out;
+  margin: 20px;
+}
+
+.icon_tech:hover {
+  transform: scale(1.2);
+}
+
+.container_my_interdisciplinary_project {
+  display: flex;
+  padding-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container_carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+}
+
+.container_contact {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon_contact {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon_contact:hover {
+  transform: scale(1.1);
+}
