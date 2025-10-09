@@ -83,17 +83,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
+  margin: 4px;
   margin-top: 16px;
 }
 
 .indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  size: 120px;
+  margin: 2px;
   background-color: #ccc;
-  border: none;
-  cursor: pointer;
 }
 
 .indicator.active {

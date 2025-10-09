@@ -1,10 +1,9 @@
-import { ReactNode } from "react";
 import { FiUser, FiTool } from "react-icons/fi";
 import { FaDraftingCompass } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
-import Image from "next/image";
 
 import styles from "./style.module.css"
+import type { ReactNode } from "react";
 
 type NavbarPros = {
     targets: string[]
@@ -14,7 +13,7 @@ export const Navbar = ({ targets }: NavbarPros) => {
 
     return (
         <nav className={styles.container}>
-            <Image 
+            <img 
                 src={"/assets/images/my_logo.png"} 
                 width={500}
                 height={500}

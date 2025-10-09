@@ -2,7 +2,6 @@ import { Navbar } from "../../components/Navbar";
 import { CarouselCard } from "../../components/CarouselCard";
 import { Title } from "../../components/Title";
 import { Footer } from "../../components/Footer";
-import Image from "next/image";
 
 import styles from "./style.module.css";
 
@@ -34,7 +33,7 @@ export default function Portfolio() {
 
             <div id="home" className={styles.container_home}>
                 <div className={styles.image}>
-                    <Image width={1500} height={1500} src="/assets/images/my-photo.jpeg" className={styles.image} alt="Minha foto" />
+                    <img width={1500} height={1500} src="/assets/images/my-photo.jpeg" className={styles.image} alt="Minha foto" />
                 </div>
                 <div className={styles.container_text}>
                     <p className={styles.text_first_part}>
@@ -222,7 +221,7 @@ type IconViewProps = {
 
 const IconView = ({ link }: IconViewProps) => {
     return (
-        <Image
+        <img
             src={link}
             className={styles.icon_tech}
             alt="Imagem com o simbolo de uma tecnologia"

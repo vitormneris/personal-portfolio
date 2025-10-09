@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -33,22 +32,6 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
-  height: 60px;
-  width: 60px;
-  align-self: center;
-}
-
-.carousel-indicators {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 @theme inline {
@@ -166,3 +149,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+

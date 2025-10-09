@@ -1,15 +1,14 @@
 'use client';
 
-import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 
 import styles from "./style.module.css";
 
 import {
     Carousel,
-    CarouselApi,
     CarouselContent,
     CarouselItem,
+    type CarouselApi,
 } from "@/components/ui/carousel"
 import React from "react";
 
@@ -50,7 +49,7 @@ export const CarouselCard = ({ data, title, description, links }: CarouselCardPr
                     {data.map((value: string, index: number) => (
                         <CarouselItem key={index}>
                             <div className={styles.container_image}>
-                                <Image src={value} className={styles.image} width={1500} height={1500} alt="Imagem do projeto interdisciplinar" />
+                                <img src={value} className={styles.image} width={1500} height={1500} alt="Imagem do projeto interdisciplinar" />
                             </div>
                         </CarouselItem>
 
