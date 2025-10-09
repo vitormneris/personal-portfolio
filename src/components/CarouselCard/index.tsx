@@ -49,7 +49,7 @@ export const CarouselCard = ({ data, title, description, links }: CarouselCardPr
                     {data.map((value: string, index: number) => (
                         <CarouselItem key={index}>
                             <div className={styles.container_image}>
-                                <img src={value} className={styles.image} width={1500} height={1500} alt="Imagem do projeto interdisciplinar" />
+                                <img src={value} className={styles.image} alt="Imagem do projeto interdisciplinar" />
                             </div>
                         </CarouselItem>
 

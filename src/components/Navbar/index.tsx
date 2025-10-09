@@ -14,7 +14,7 @@ export const Navbar = ({ targets }: NavbarPros) => {
     return (
         <nav className={styles.container}>
             <img 
-                src={"/assets/images/my_logo.png"} 
+                src={`${import.meta.env.BASE_URL}/assets/images/my_logo.png`}
                 width={500}
                 height={500}
                 className={styles.logo}

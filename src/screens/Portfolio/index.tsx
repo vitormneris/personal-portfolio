@@ -33,7 +33,7 @@ export default function Portfolio() {
 
             <div id="home" className={styles.container_home}>
                 <div className={styles.image}>
-                    <img width={1500} height={1500} src="/assets/images/my-photo.jpeg" className={styles.image} alt="Minha foto" />
+                    <img width={1500} height={1500} src={`${import.meta.env.BASE_URL}/assets/images/my-photo.jpeg`} className={styles.image} alt="Minha foto" />
                 </div>
                 <div className={styles.container_text}>
                     <p className={styles.text_first_part}>
@@ -49,10 +49,10 @@ export default function Portfolio() {
                     </p>
                     <div className={styles.container_contact}>
                         <a href={openLinkGitHub()} target="_blank">
-                            <img src={"/assets/images/social-networks/github.png"} className={styles.icon_contact} />
+                            <img src={`${import.meta.env.BASE_URL}/assets/images/social-networks/github.png`} className={styles.icon_contact} />
                         </a>
                         <a href={openLinkLinkedin()} target="_blank">
-                            <img src={"/assets/images/social-networks/linkedin.png"} className={styles.icon_contact} />
+                            <img src={`${import.meta.env.BASE_URL}/assets/images/social-networks/linkedin.png`} className={styles.icon_contact} />
                         </a>
                     </div>
                 </div>
@@ -114,30 +114,30 @@ export default function Portfolio() {
             <div id="my_skills" className={styles.container_my_skills}>
                 <Title text="Experiência nestas tecnologias" />
                 <div className={styles.container_skills}>
-                    <IconView link={"/assets/images/techs/python.png"} />
-                    <IconView link={"/assets/images/techs/java-coffee.png"} />
-                    <IconView link={"/assets/images/techs/spring-boot-2.png"} />
-                    <IconView link={"/assets/images/techs/spring-data.webp"} />
-                    <IconView link={"/assets/images/techs/spring-security-2.png"} />
-                    <IconView link={"/assets/images/techs/jwt.png"} />
-                    <IconView link={"/assets/images/techs/mysql.png"} />
-                    <IconView link={"/assets/images/techs/mongodb.png"} />
-                    <IconView link={"/assets/images/techs/postgresql.png"} />
-                    <IconView link={"/assets/images/techs/figma.png"} />
-                    <IconView link={"/assets/images/techs/html.webp"} />
-                    <IconView link={"/assets/images/techs/css.svg"} />
-                    <IconView link={"/assets/images/techs/javascript.png"} />
-                    <IconView link={"/assets/images/techs/typescript.png"} />
-                    <IconView link={"/assets/images/techs/react-native.png"} />
-                    <IconView link={"/assets/images/techs/docker.png"} />
-                    <IconView link={"/assets/images/techs/amazon_s3.webp"} />
-                    <IconView link={"/assets/images/techs/amazon_ec2.webp"} />
-                    <IconView link={"/assets/images/techs/redhat.webp"} />
-                    <IconView link={"/assets/images/techs/ubuntu.png"} />
-                    <IconView link={"/assets/images/techs/mercado-pago.png"} />
-                    <IconView link={"/assets/images/techs/jira.svg"} />
-                    <IconView link={"/assets/images/techs/gradle.png"} />
-                    <IconView link={"/assets/images/techs/git.png"} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/python.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/java-coffee.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/spring-boot-2.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/spring-data.webp`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/spring-security-2.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/jwt.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/mysql.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/mongodb.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/postgresql.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/figma.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/html.webp`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/css.svg`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/javascript.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/typescript.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/react-native.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/docker.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/amazon_s3.webp`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/amazon_ec2.webp`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/redhat.webp`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/ubuntu.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/mercado-pago.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/jira.svg`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/gradle.png`} />
+                    <IconView link={`${import.meta.env.BASE_URL}/assets/images/techs/git.png`} />
                 </div>
             </div>
 
