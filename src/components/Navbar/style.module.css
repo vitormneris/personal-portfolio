@@ -35,18 +35,22 @@
   align-items: center;
   border-color: #6c78f4ff;
   border-width: 2px;
+  color: #fff;
 }
 
 .nav_button:hover {
   transform: scale(1.08);
+  background-color: #fff;
+  color: #000;
 }
 
 .nav_button:active {
   transform: scale(1.02);
+  background-color: #fff;
+  color: #000;
 }
 
 .text_button {
-  color: #fff;
   font-size: 17px;
   font-family: 'Montserrat';
   font-weight: 500;
@@ -87,4 +91,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
 }

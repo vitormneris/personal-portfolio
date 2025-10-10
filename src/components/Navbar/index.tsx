@@ -58,22 +58,22 @@ export const Navbar = ({ targets }: NavbarPros) => {
         <div className={styles.container_buttons}>
           <NavButton
             text="Início"
-            children={<GoHomeFill size={18} color="#fff" />}
+            children={<GoHomeFill className={styles.icon} />}
             onPress={targets[0]}
           />
           <NavButton
             text="Me conheça"
-            children={<FiUser size={18} color="#fff" />}
+            children={<FiUser className={styles.icon} />}
             onPress={targets[1]}
           />
           <NavButton
             text="Minhas habilidades"
-            children={<FiTool size={18} color="#fff" />}
+            children={<FiTool className={styles.icon} />}
             onPress={targets[2]}
           />
           <NavButton
             text="Projetos"
-            children={<FaDraftingCompass size={18} color="#fff" />}
+            children={<FaDraftingCompass className={styles.icon} />}
             onPress={targets[3]}
           />
         </div>
@@ -112,29 +112,28 @@ export const SideMenu = ({ hidden, targets, hiddenMenu }: SideMenuProps) => {
       <button onClick={hiddenMenu}>
         <NavButton
           text="Início"
-          children={<GoHomeFill size={18} color="#fff" />}
+          children={<GoHomeFill className={styles.icon} />}
           onPress={targets[0]}
         />
       </button>
       <button onClick={hiddenMenu}>
-
         <NavButton
           text="Me conheça"
-          children={<FiUser size={18} color="#fff" />}
+          children={<FiUser className={styles.icon} />}
           onPress={targets[1]}
         />
       </button>
       <button onClick={hiddenMenu}>
         <NavButton
           text="Minhas habilidades"
-          children={<FiTool size={18} color="#fff" />}
+          children={<FiTool className={styles.icon} />}
           onPress={targets[2]}
         />
       </button>
       <button onClick={hiddenMenu}>
         <NavButton
           text="Projetos"
-          children={<FaDraftingCompass size={18} color="#fff" />}
+          children={<FaDraftingCompass className={styles.icon} />}
           onPress={targets[3]}
         />
       </button>
