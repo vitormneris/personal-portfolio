@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   width: 100%;
   background-color: #212121ff;
-  padding-top: 25px 35px 25px 35px;
+  padding: 15px 25px 15px 25px;
   margin-top: 50px;
   justify-content: space-between;
   align-items: center;
@@ -15,8 +15,8 @@
   font-size: 20px;
   color: #ffffffff;
   font-weight: 400px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-family: 'Montserrat'
 }
 
@@ -26,25 +26,27 @@
 }
 
 .container_text {
+  margin: 6px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .text {
-  font-size: 20px;
+  font-size: 1.8rem;
   color: #fff;
   font-weight: 300;
   font-family: 'Montserrat'
 }
 
 .text_final {
-  font-size: 20px;
+  font-size: 1.8rem;
   color: #fff;
   font-weight: 300;
   font-family: 'Montserrat';
-  margin: 15px;
+  margin: 10px;
 }
+
 
 .contact {
   margin: 10px;

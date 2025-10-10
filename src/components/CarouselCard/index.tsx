@@ -1,16 +1,14 @@
 'use client';
-
-import { GoDotFill } from "react-icons/go";
-
-import styles from "./style.module.css";
-
+import React from "react";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     type CarouselApi,
 } from "@/components/ui/carousel"
-import React from "react";
+import { GoDotFill } from "react-icons/go";
+
+import styles from "./style.module.css";
 
 type CarouselCardProps = {
     data: string[],
@@ -40,6 +38,7 @@ export const CarouselCard = ({ data, title, description, links }: CarouselCardPr
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap() + 1)
         })
+
     }, [api])
 
     return (
@@ -52,7 +51,6 @@ export const CarouselCard = ({ data, title, description, links }: CarouselCardPr
                                 <img src={value} className={styles.image} alt="Imagem do projeto interdisciplinar" />
                             </div>
                         </CarouselItem>
-
                     ))}
                 </CarouselContent>
             </Carousel>

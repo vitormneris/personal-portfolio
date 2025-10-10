@@ -10,6 +10,43 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 6px;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1218px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+button {
+  all: unset;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;

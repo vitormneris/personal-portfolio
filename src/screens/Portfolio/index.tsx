@@ -32,9 +32,7 @@ export default function Portfolio() {
             <Navbar targets={["#home", "#who_iam", "#my_skills", "#my_interdisciplinary_project"]} />
 
             <div id="home" className={styles.container_home}>
-                <div className={styles.image}>
-                    <img width={1500} height={1500} src={`${import.meta.env.BASE_URL}/assets/images/my-photo.jpeg`} className={styles.image} alt="Minha foto" />
-                </div>
+                <img className={styles.image} src={`${import.meta.env.BASE_URL}/assets/images/my-photo.jpeg`} alt="Minha foto" />
                 <div className={styles.container_text}>
                     <p className={styles.text_first_part}>
                         Olá, meu nome é
