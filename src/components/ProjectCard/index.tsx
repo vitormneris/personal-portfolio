@@ -24,7 +24,7 @@ export const ProjectCard = ({ imageUrl, title, dataScreen }: ProjectCardProps) =
             </div>
 
             <Link
-                to={`${import.meta.env.BASE_URL}project`}
+                to={`/project`}
                 state={dataScreen}
                 className={styles.link}
             >

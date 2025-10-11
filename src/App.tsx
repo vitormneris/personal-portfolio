@@ -11,15 +11,15 @@ export default function App() {
   return (
     <Routes>
       <Route 
-        path={`${import.meta.env.BASE_URL}`} 
+        path={`/`} 
         element={<PortfolioScreen />} 
       />
       <Route 
-        path={`${import.meta.env.BASE_URL}allprojects`} 
+        path={`/allprojects`} 
         element={<ListProjectsScreen />} 
       />
       <Route 
-        path={`${import.meta.env.BASE_URL}project`} 
+        path={`/project`} 
         element={<ProjectScreen />} 
       />
     </Routes>

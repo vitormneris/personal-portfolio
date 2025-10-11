@@ -33,7 +33,7 @@ const buttons: NavButton[] = [
     {
         text: "Projetos",
         children: (<FaDraftingCompass className={styles.icon} />),
-        target: `${import.meta.env.BASE_URL}allprojects`
+        target: `/allprojects`
     }
 ]
 

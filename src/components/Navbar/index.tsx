@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 
 import styles from "./style.module.css"
 import type { NavButton } from "@/utils/types";
+import { HashLink as Link } from 'react-router-hash-link';
 
 type NavbarPros = {
   buttons: NavButton[]
@@ -70,11 +71,11 @@ type NavButtonProps = {
 
 const NavButton = ({ text, children, onPress }: NavButtonProps) => {
   return (
-    <a href={onPress}>
+    <Link to={onPress}>
       <div className={styles.nav_button}>
         {children} <p className={styles.text_button}>{text}</p>
       </div>
-    </a>
+    </Link>
   )
 }
 
