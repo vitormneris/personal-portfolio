@@ -9,15 +9,15 @@ export const Footer = () => {
             <div className={styles.contact}>
                 <p className={styles.title}>Entre em contato comigo</p>
                 <div className={styles.container_text}>
-                    <MdAlternateEmail size={17} color="#fff" className={styles.icon}/>
+                    <MdAlternateEmail className={styles.icon}/>
                     <p className={styles.text}>joaomoreiraneris0@gmail.com</p>
                 </div>
                 <div className={styles.container_text}>
-                    <FiSmartphone size={17} color="#fff" className={styles.icon}/>
+                    <FiSmartphone className={styles.icon}/>
                     <p className={styles.text}>+55 (11) 91616-5849</p>
                 </div>
             </div>
-            <p className={styles.text_final}>© 2025 João Vítor Moreira — Todos os direitos reservados.</p>
+            <p className={styles.text_final}>© 2025 João Vítor Moreira dos Santos Neris — Todos os direitos reservados.</p>
         </div >
     )
 }

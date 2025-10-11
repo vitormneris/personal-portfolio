@@ -41,13 +41,13 @@
 .nav_button:hover {
   transform: scale(1.08);
   background-color: #fff;
-  color: #000;
+  color: #6c78f4ff;
 }
 
 .nav_button:active {
   transform: scale(1.02);
   background-color: #fff;
-  color: #000;
+  color: #6c78f4ff;
 }
 
 .text_button {
@@ -93,7 +93,3 @@
   align-items: center;
 }
 
-.icon {
-  width: 18px;
-  height: 18px;
-}

@@ -15,13 +15,13 @@ export const openLinkPI5Backend = () => openLink("https://github.com/vitormneris
 export const openLinkPI5FrontendAdm = () => openLink("https://github.com/vitormneris/bem-te-vi-front-end-adm")
 export const openLinkPI5FrontendClient = () => openLink("https://github.com/vitormneris/bem-te-vi-front-end-customer")
 
-export const pi1Images = [
+export const pi1Images: string[] = [
     `${import.meta.env.BASE_URL}assets/images/pi1/screenshot1.png`,
     `${import.meta.env.BASE_URL}assets/images/pi1/screenshot2.png`,
     `${import.meta.env.BASE_URL}assets/images/pi1/screenshot3.png`
 ]
 
-export const pi2Images = [
+export const pi2Images: string[] = [
     `${import.meta.env.BASE_URL}assets/images/pi2/screenshot1.png`,
     `${import.meta.env.BASE_URL}assets/images/pi2/screenshot2.png`,
     `${import.meta.env.BASE_URL}assets/images/pi2/screenshot3.png`,
@@ -37,7 +37,7 @@ export const pi2Images = [
     `${import.meta.env.BASE_URL}assets/images/pi2/screenshot13.png`,
 ]
 
-export const pi3Images = [
+export const pi3Images: string[] = [
     `${import.meta.env.BASE_URL}assets/images/pi3/screenshot1.png`,
     `${import.meta.env.BASE_URL}assets/images/pi3/screenshot2.png`,
     `${import.meta.env.BASE_URL}assets/images/pi3/screenshot3.png`,
@@ -55,7 +55,7 @@ export const pi3Images = [
     `${import.meta.env.BASE_URL}assets/images/pi3/screenshot15.png`,
 ]
 
-export const pi4Images = [
+export const pi4Images: string[] = [
     `${import.meta.env.BASE_URL}assets/images/pi4/screenshot8.png`,
     `${import.meta.env.BASE_URL}assets/images/pi4/screenshot9.png`,
     `${import.meta.env.BASE_URL}assets/images/pi4/screenshot10.png`,
@@ -78,7 +78,7 @@ export const pi4Images = [
     `${import.meta.env.BASE_URL}assets/images/pi4/screenshot7.png`,
 ]
 
-export const pi5Images = [
+export const pi5Images: string[] = [
     `${import.meta.env.BASE_URL}assets/images/pi5/screenshot1.png`,
     `${import.meta.env.BASE_URL}assets/images/pi5/screenshot2.png`,
     `${import.meta.env.BASE_URL}assets/images/pi5/screenshot3.png`,

@@ -1,26 +1,18 @@
 import { useEffect, useState, type ReactNode } from "react";
 
-import { FiUser, FiTool } from "react-icons/fi";
-import { FaDraftingCompass } from "react-icons/fa";
-import { GoHomeFill } from "react-icons/go";
-
 import styles from "./style.module.css"
+import type { NavButton } from "@/utils/types";
 
 type NavbarPros = {
-  targets: string[]
+  buttons: NavButton[]
 }
 
-export type Item = {
-  title: string,
-  url: string
-}
-
-export const Navbar = ({ targets }: NavbarPros) => {
+export const Navbar = ({ buttons }: NavbarPros) => {
   const [isMobile, setIsMobile] = useState<boolean>(false)
   const [hidden, setHidden] = useState<string>('none')
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 1100);
+    setIsMobile(window.innerWidth < 1215);
   };
 
   useEffect(() => {
@@ -56,29 +48,16 @@ export const Navbar = ({ targets }: NavbarPros) => {
       )}
       {!isMobile && (
         <div className={styles.container_buttons}>
-          <NavButton
-            text="Início"
-            children={<GoHomeFill className={styles.icon} />}
-            onPress={targets[0]}
-          />
-          <NavButton
-            text="Me conheça"
-            children={<FiUser className={styles.icon} />}
-            onPress={targets[1]}
-          />
-          <NavButton
-            text="Minhas habilidades"
-            children={<FiTool className={styles.icon} />}
-            onPress={targets[2]}
-          />
-          <NavButton
-            text="Projetos"
-            children={<FaDraftingCompass className={styles.icon} />}
-            onPress={targets[3]}
-          />
+          {buttons.map(({ text, children, target }: NavButton) => (
+            <NavButton
+              text={text}
+              children={children}
+              onPress={target}
+            />
+          ))}
         </div>
       )}
-      <SideMenu hidden={hidden} targets={targets} hiddenMenu={hiddenMenu} />
+      <SideMenu hidden={hidden} buttons={buttons} hiddenMenu={hiddenMenu} />
     </nav>
   )
 }
@@ -101,42 +80,23 @@ const NavButton = ({ text, children, onPress }: NavButtonProps) => {
 
 type SideMenuProps = {
   hidden: string,
-  targets: string[],
-  hiddenMenu: () => void
+  hiddenMenu: () => void,
+  buttons: NavButton[],
 }
 
-export const SideMenu = ({ hidden, targets, hiddenMenu }: SideMenuProps) => {
+export const SideMenu = ({ hidden, buttons, hiddenMenu }: SideMenuProps) => {
 
   return (
     <div className={styles.container_menu} style={{ display: hidden }} onClick={hiddenMenu}>
-      <button onClick={hiddenMenu}>
-        <NavButton
-          text="Início"
-          children={<GoHomeFill className={styles.icon} />}
-          onPress={targets[0]}
-        />
-      </button>
-      <button onClick={hiddenMenu}>
-        <NavButton
-          text="Me conheça"
-          children={<FiUser className={styles.icon} />}
-          onPress={targets[1]}
-        />
-      </button>
-      <button onClick={hiddenMenu}>
-        <NavButton
-          text="Minhas habilidades"
-          children={<FiTool className={styles.icon} />}
-          onPress={targets[2]}
-        />
-      </button>
-      <button onClick={hiddenMenu}>
-        <NavButton
-          text="Projetos"
-          children={<FaDraftingCompass className={styles.icon} />}
-          onPress={targets[3]}
-        />
-      </button>
+      {buttons.map(({ text, children, target }: NavButton) => (
+        <button onClick={hiddenMenu}>
+          <NavButton
+            text={text}
+            children={children}
+            onPress={target}
+          />
+        </button>
+      ))}
     </div>
   )
 }

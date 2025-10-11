@@ -1,38 +1,49 @@
 import { Navbar } from "../../components/Navbar";
-import { CarouselCard } from "../../components/CarouselCard";
 import { Title } from "../../components/Title";
 import { Footer } from "../../components/Footer";
-
+import { openLinkGitHub, openLinkLinkedin } from "../../modelview/PortfolioModelView";
+import { GoHomeFill } from "react-icons/go";
+import { FaDraftingCompass } from "react-icons/fa";
+import { FiTool, FiUser } from "react-icons/fi";
+import { MdSummarize } from "react-icons/md";
+import type { NavButton } from "@/utils/types";
 import styles from "./style.module.css";
 
-import {
-    openLinkGitHub,
-    openLinkLinkedin,
-    openLinkPI1,
-    openLinkPI2,
-    openLinkPI3Backend,
-    openLinkPI3Frontend,
-    openLinkPI4Backend,
-    openLinkPI4FrontendAdm,
-    openLinkPI4FrontendClient,
-    openLinkPI5Backend,
-    openLinkPI5FrontendAdm,
-    openLinkPI5FrontendClient,
-    pi1Images,
-    pi2Images,
-    pi3Images,
-    pi4Images,
-    pi5Images,
-} from "../../modelview/PortfolioModelView";
+const buttons: NavButton[] = [
+    {
+        text: "Início",
+        children: (<GoHomeFill className={styles.icon} />),
+        target: "#home"
+    },
+    {
+        text: "Me conheça",
+        children: (<FiUser className={styles.icon} />),
+        target: "#who_iam"
+    },
+    {
+        text: "Minhas habilidades",
+        children: (<FiTool className={styles.icon} />),
+        target: "#my_skills"
+    },
+    {
+        text: "Informações gerais",
+        children: (<MdSummarize className={styles.icon} />),
+        target: "#container_information"
+    },
+    {
+        text: "Projetos",
+        children: (<FaDraftingCompass className={styles.icon} />),
+        target: `${import.meta.env.BASE_URL}allprojects`
+    }
+]
 
-export default function Portfolio() {
+export default function PortfolioScreen() {
 
     return (
         <div className={styles.container}>
-            <Navbar targets={["#home", "#who_iam", "#my_skills", "#my_interdisciplinary_project"]} />
-
+            <Navbar buttons={buttons} />
             <div id="home" className={styles.container_home}>
-                <img className={styles.image} src={`${import.meta.env.BASE_URL}/assets/images/my-photo.jpeg`} alt="Minha foto" />
+                <img className={styles.image} src={`${import.meta.env.BASE_URL}assets/images/my-photo.jpeg`} alt="Minha foto" />
                 <div className={styles.container_text}>
                     <p className={styles.text_first_part}>
                         Olá, meu nome é
@@ -47,15 +58,14 @@ export default function Portfolio() {
                     </p>
                     <div className={styles.container_contact}>
                         <a href={openLinkGitHub()} target="_blank">
-                            <img src={`${import.meta.env.BASE_URL}/assets/images/social-networks/github.png`} className={styles.icon_contact} />
+                            <img src={`${import.meta.env.BASE_URL}assets/images/social-networks/github.png`} className={styles.icon_contact} />
                         </a>
                         <a href={openLinkLinkedin()} target="_blank">
-                            <img src={`${import.meta.env.BASE_URL}/assets/images/social-networks/linkedin.png`} className={styles.icon_contact} />
+                            <img src={`${import.meta.env.BASE_URL}assets/images/social-networks/linkedin.png`} className={styles.icon_contact} />
                         </a>
                     </div>
                 </div>
             </div>
-
 
             <div id="who_iam" className={styles.container_who_iam}>
 
@@ -108,7 +118,6 @@ export default function Portfolio() {
 
             </div>
 
-
             <div id="my_skills" className={styles.container_my_skills}>
                 <Title text="Experiência nestas tecnologias" />
                 <div className={styles.container_skills}>
@@ -139,73 +148,67 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <div id="my_interdisciplinary_project" className={styles.container_my_interdisciplinary_project}>
-                <Title text="Meus projetos interdisciplinares" />
-                <div className={styles.container_carousel}>
-                    <CarouselCard
-                        data={pi1Images}
-                        title="1° PI - Debian redesign"
-                        description={
-                            "Projeto de redesign da página inicial do site debian.org, site responsivo de página estática, " +
-                            "utilizando apenas HTML5, CSS3 e JavaScript para reforçar fundamentos web. Inclui layout responsivo, " +
-                            "estrutura semântica e interatividade básica."
-                        }
-                        links={[{ text: "Ir para o repositório - Debian redesign", link: openLinkPI1() }]}
-                    />
-                    <CarouselCard
-                        data={pi2Images}
-                        title="2° PI - Simple CRUD PHP"
-                        description={
-                            "Projeto CRUD simples desenvolvido sob orientação do professor Faustino, permitindo " +
-                            "criar, ler, atualizar e excluir registros de Usuários e Produtos. Construído com HTML5, " +
-                            "CSS3, JavaScript, PHP e SQLite, proporciona prática em integração frontend-backend e " +
-                            "persistência de dados. Possui integração com ViaCEP e recursos de mapa."
-                        }
-                        links={[{ text: "Ir para o repositório - Simple CRUD PHP", link: openLinkPI2() }]}
-                    />
-                    <CarouselCard
-                        data={pi3Images}
-                        title="3° PI - WB Assessoria"
-                        description={
-                            "O sistema WB Assessoria foi desenvolvido com Java 21, Spring Boot, Spring Security com JWT, MongoDB, HTML5, CSS3, " +
-                            "JavaScript e Gradle. Permite cadastro de usuários, visualização de mensalidades e acompanhamento de " +
-                            "processos migratórios, com envio automático de notificações por e-mail via Java Mail Sender. A arquitetura " +
-                            "está organizada em dois repositórios, separando o back-end do front-end."
-                        }
-                        links={[
-                            { text: "Ir para o repositório - back-end WB", link: openLinkPI3Backend() },
-                            { text: "Ir para o repositório - front-end WB", link: openLinkPI3Frontend() },
-                        ]}
-                    />
-                    <CarouselCard
-                        data={pi4Images}
-                        title="4° PI - Mistergold"
-                        description={
-                            "O projeto Mister Gold é um e-commerce com back-end em Java 21 e Spring Boot, utilizando " +
-                            "Spring Security com JWT e arquitetura hexagonal. O front-end, feito em HTML5, CSS3 e JavaScript, é dividido em duas " +
-                            "partes: uma voltada para o administrador e outra para o cliente."
-                        }
-                        links={[
-                            { text: "Ir para o repositório - back-end Mistergold", link: openLinkPI4Backend() },
-                            { text: "Ir para o repositório - front-end adm  Mistergold", link: openLinkPI4FrontendAdm() },
-                            { text: "Ir para o repositório - front-end customer Mistergold", link: openLinkPI4FrontendClient() },
-                        ]}
-                    />
-                    <CarouselCard
-                        data={pi5Images}
-                        title="5° PI - Bemtevi"
-                        description={
-                            "O projeto Bemtevi é um sistema de automação para pet shops, com back-end em Spring Boot integrado " +
-                            "a PostgreSQL, MongoDB e serviços como Mercado Pago. O front-end, construido em React Native e focado em Android, permite que " +
-                            "administradores gerenciem produtos, pedidos e serviços, e que clientes façam compras, contratem serviços " +
-                            "e utilizem o chat feito com WebSocket. O sistema foi hospedado na AWS e utiliza arquivos Docker."
-                        }
-                        links={[
-                            { text: "Ir para o repositório - back-end Bemtevi", link: openLinkPI5Backend() },
-                            { text: "Ir para o repositório - front-end adm Bemtevi", link: openLinkPI5FrontendAdm() },
-                            { text: "Ir para o repositório - front-end customer Bemtevi", link: openLinkPI5FrontendClient() },
-                        ]}
-                    />
+            <div id="container_information" className={styles.wrapper_container_information}>
+                <Title text="Informações gerais" />
+                <div className={styles.container_information}>
+                    <div className={styles.college_information}>
+                        <h2 className={styles.title_information}>Faculdades</h2>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Faculdade: Fatec - Faculdade de Tecnologia</p>
+                            <p className={styles.paragraph_information}>Localização: Itaquera / SP</p>
+                            <p className={styles.paragraph_information}>Curso: Desenvolvimento de Software Multiplataforma (DSM)</p>
+                            <p className={styles.paragraph_information}>Duração: Início - Janeiro de 2023 | Término - Dezembro de 2025</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.work_information}>
+                        <h2 className={styles.title_information}>Experiência profissional</h2>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Empresa: Run Multiplataforma</p>
+                            <p className={styles.paragraph_information}>Cargo: Desenvolvedor back-end (Freelancer)</p>
+                            <p className={styles.paragraph_information}>Duração: Início - Maio de 2024 | Término - Julho de 2024</p>
+                            <p className={styles.paragraph_information}>
+                                Descrição: Desenvolvi soluções para o sistema back-end do projeto Run Multiplataforma,
+                                uma plataforma web de cursos online, usei tecnologias como Java 21, Spring Boot,
+                                MongoDB, Docker e FFMPEG, bem como serviços de terceiros como Firebase para realizar
+                                upload de vídeos. Neste projeto tive a oportunidade de aprender e trabalhar com a
+                                arquitetura hexagonal.
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.course_information}>
+                        <h2 className={styles.title_information}>Cursos e extensões</h2>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Empresa: Stark Academy (Caraça e Nascimento Cursos LTDA)</p>
+                            <p className={styles.paragraph_information}>Localização: Arujá / SP</p>
+                            <p className={styles.paragraph_information}>Duração: Início - Agosto de 2019 | Término - Junho de 2021</p>
+                            <p className={styles.paragraph_information}>Curso: Informática básica(Introdução, Windows e Internet) e pacote Office(Word, Excel powerpoint)</p>
+                            <p className={styles.paragraph_information}>Carga horária: 78 horas</p>
+                        </div>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Empresa: Curso em vídeo</p>
+                            <p className={styles.paragraph_information}>Localização: Online</p>
+                            <p className={styles.paragraph_information}>Duração: Início - 6 de Setembro de 2021 | Término - 28 de Setembro de 2021</p>
+                            <p className={styles.paragraph_information}>Cursos: Python3 - Mundo 1, Python3 - Mundo 2 e Python3 - Mundo 3</p>
+                            <p className={styles.paragraph_information}>Carga horária: 120 horas</p>
+                        </div>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Empresa: Curso em vídeo</p>
+                            <p className={styles.paragraph_information}>Localização: Online</p>
+                            <p className={styles.paragraph_information}>Duração: Início - Janeiro de 2023 | Término - 28 de Março de 2023</p>
+                            <p className={styles.paragraph_information}>Cursos: Algoritmo, Java Básico e Java POO</p>
+                            <p className={styles.paragraph_information}>Carga horária: 120 horas</p>
+                        </div>
+                    </div>
+                    <div className={styles.language_information}>
+                        <h2 className={styles.title_information}>Conhecimento em línguas</h2>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Português nativo</p>
+                        </div>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Inglês intermediário</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer />
