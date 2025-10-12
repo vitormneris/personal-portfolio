@@ -32,11 +32,6 @@ html {
   }
 }
 
-@media (min-width: 1218px) {
-  html {
-    font-size: 14px;
-  }
-}
 
 button {
   all: unset;

@@ -111,7 +111,7 @@ export function ProjectScreen() {
                         </p>
 
                         <div className={styles.wrapper_info_link}>
-                            <h2 className={styles.info_title}> Links </h2>
+                            <h2 className={styles.info_title}> Links para os repositórios do GitHub </h2>
                             {links.map(({ text, link }: Link) => (
                                 <div key={link} className={styles.container_info_link}>
                                     <GoDotFill size={12} color="#000" />

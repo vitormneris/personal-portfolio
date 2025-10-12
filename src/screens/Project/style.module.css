@@ -1,5 +1,5 @@
 :root {
-  --color_background_text: #ccd6e77d;
+  --color_background_text: #dedede7d;
   --radius_border_text: 30px;
 }
 
@@ -42,19 +42,20 @@
 }
 
 .image {
+  margin: auto;
   display: flex;
   align-self: center;
   justify-self: center;
   border-radius: 20px;
   height: auto;
-  width: 60%;
+  width: 100%;
+  max-width: 700px;
   border: 2px #000000 solid;
 }
 
 .container_info {
   display: flex;
   flex-direction: column;
-  padding: 10px;
   width: 100%;
   height: 100%;
 }
@@ -85,7 +86,6 @@
   height: 100%;
   width: 100%;
   margin: 10px;
-  padding: 20px;
 }
 
 .container_info_link {
@@ -93,7 +93,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 7px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -112,6 +111,7 @@
   font-family: 'Montserrat';
   font-weight: 500px;
   margin-left: 7px;
+  padding: 5px;
 }
 
 .container_indicators {
@@ -139,10 +139,9 @@
 
 .info_list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24.5rem, 1fr));
   justify-items: start;
   margin: 10px;
-  padding: 20px;
 }
 
 .wrapper_list_item {
@@ -153,7 +152,7 @@
 }
 
 .info_list_item {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'Montserrat';
   margin: 0px 20px 0px 10px;
 }
