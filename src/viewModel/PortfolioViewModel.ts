@@ -4,6 +4,7 @@ function openLink(url: string): string {
 
 export const openLinkGitHub = () => openLink("https://github.com/vitormneris")
 export const openLinkLinkedin = () => openLink("https://www.linkedin.com/in/vitormneris/")
+export const openLinkPortfolio = () => openLink("https://vitormneris.github.io/personal-portfolio")
 
 export const openLinkPI1 = () => openLink("https://github.com/vitormneris/debian-redesign#")
 

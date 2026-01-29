@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import styles from "./style.module.css"
 import type { NavButton } from "@/utils/types";
 import { HashLink as Link } from 'react-router-hash-link';
+import { openLinkPortfolio } from "@/viewModel/PortfolioViewModel";
 
 type NavbarPros = {
   buttons: NavButton[]
@@ -33,13 +34,16 @@ export const Navbar = ({ buttons }: NavbarPros) => {
 
   return (
     <nav className={styles.container}>
-      <img
-        src={`${import.meta.env.BASE_URL}/assets/images/my_logo.png`}
-        width={500}
-        height={500}
-        className={styles.logo}
-        alt="Logo, icone do terminal com letras as J, V e M ao lado"
-      />
+      <a href={openLinkPortfolio()} className={styles.logo_link}>
+        <img
+          src={`${import.meta.env.BASE_URL}/assets/images/my_logo.png`}
+          width={500}
+          height={500}
+          className={styles.logo}
+          alt="Logo, icone do terminal com letras as J, V e M ao lado"
+        />
+      </a>
+
       {isMobile && (
         <button className={styles.button} onClick={hiddenMenu}>
           <hr className={styles.line} />

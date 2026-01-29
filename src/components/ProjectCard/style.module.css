@@ -36,6 +36,7 @@
   border-radius: 25px;
   border: 4px #fff solid;
   height: auto;
+  max-height: 300px;
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
