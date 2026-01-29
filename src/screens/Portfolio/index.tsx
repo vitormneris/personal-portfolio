@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/Navbar";
 import { Title } from "../../components/Title";
 import { Footer } from "../../components/Footer";
-import { openLinkGitHub, openLinkLinkedin } from "../../modelview/PortfolioModelView";
+import { openLinkGitHub, openLinkLinkedin } from "../../viewModel/PortfolioViewModel";
 import { GoHomeFill } from "react-icons/go";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FiTool, FiUser } from "react-icons/fi";
@@ -52,9 +52,9 @@ export default function PortfolioScreen() {
                         João Vítor
                     </p>
                     <p className={styles.text_third_part}>
-                        Desenvolvedor Fullstack, com experiência em Java, Spring Boot, React Native, além
-                        de integração com bancos de dados relacionais e não-relacionais. Apaixonado
-                        por criar soluções eficientes e aprender novas tecnologias constantemente.
+                        Desenvolvedor Backend com experiência em Java e Spring Boot, atuando na integração com bancos de dados relacionais e
+                        não relacionais, além de serviços em cloud (AWS). Focado em criar soluções eficientes e em aprendizado contínuo de
+                        novas tecnologias.
                     </p>
                     <div className={styles.container_contact}>
                         <a href={openLinkGitHub()} target="_blank">
@@ -72,47 +72,46 @@ export default function PortfolioScreen() {
                 <Title text="Sobre mim" />
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Olá! Meu nome é João Vítor Moreira, tenho 23 anos e sou desenvolvedor web fullstack. Atualmente, estou no 6º período
-                        do curso de Desenvolvimento de Software Multiplataforma na FATEC Itaquera.
+                        Olá! Meu nome é João Vítor Moreira, tenho 23 anos e sou desenvolvedor web com foco em backend. Sou formado em Desenvolvimento 
+                        de Software Multiplataforma pela FATEC Itaquera.
                     </p>
                 </div>
 
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Tenho sólida experiência na construção de aplicações RESTful utilizando Java, Spring Boot, MongoDB, MySQL e Docker,
-                        aplicando boas práticas de arquitetura, como a Arquitetura Hexagonal.
+                        Tenho experiência sólida na construção de aplicações RESTful utilizando Java e Spring Boot, com integração a MongoDB, MySQL e 
+                        uso de Docker, sempre aplicando boas práticas de arquitetura, como a Arquitetura Hexagonal.
                     </p>
                 </div>
 
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Atuei como freelancer em uma plataforma de cursos, sendo responsável pelo desenvolvimento do backend, utilização de
-                        serviços como Firebase Storage e FFMPEG para upload e processamento de vídeos. Sempre que necessário, eu entrava em
-                        contato com a equipe de frontend para orientá-los na integração das partes do projeto.
+                        Além do backend, também possuo experiência em desenvolvimento Android, utilizando Java e React Native. Já desenvolvi projetos 
+                        mobile integrados a servidores hospedados na AWS (EC2). Tenho conhecimentos em C, Python, Kotlin, HTML, CSS, JavaScript e 
+                        TypeScript, o que me permite transitar por diferentes camadas do desenvolvimento de software quando necessário.
                     </p>
                 </div>
 
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Além de backend, possuo experiência em desenvolvimento Android em Java e React Native, já desenvolvi projetos em Android
-                        com conexão com servidor. Tenho conhecimentos em C, Python, PHP, HTML, CSS, JavaScript e TypeScript, o que me permite
-                        atuar de forma versátil em diferentes camadas do desenvolvimento de software.
+                        Nos últimos tempos, venho explorando hospedagem e deploy em nuvem, com foco na AWS, utilizando serviços como EC2 para hospedar 
+                        APIs RESTful e sistemas de e-commerce, além do S3 para armazenamento e hospedagem de arquivos.
                     </p>
                 </div>
 
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Recentemente, tenho explorado hospedagem e deployment na nuvem, com foco na AWS, utilizando serviços gratuitos como o EC2
-                        para hospedar sistemas de e-commerce e APIs RESTful integradas a aplicativos Android. Além disso, tenho experiência no uso
-                        de serviços como o S3 para armazenamento e hospedagem de arquivos.
+                        Sou entusiasta de Linux desde os 16 anos, com experiência em distribuições como Ubuntu, Debian, Red Hat Enterprise Linux, Arch 
+                        Linux e NixOS. Tenho bastante afinidade com o terminal e com a criação de shell scripts, habilidades que complementam meu trabalho 
+                        com Docker e ambientes em nuvem.
                     </p>
                 </div>
 
                 <div className={styles.container_paragraph}>
                     <p className={styles.paragraph}>
-                        Sou entusiasta de Linux desde os 16 anos, com experiência em distribuições como Ubuntu, Debian, Fedora Workstation,
-                        Fedora Silverblue, Arch Linux e NixOS. Tenho afinidade com o terminal e criação de shell scripts, habilidades que
-                        complementam meu trabalho com Docker e serviços de nuvem.
+                        Tenho facilidade em aprender novas tecnologias e um interesse genuíno em entender como as coisas funcionam em profundidade. 
+                        Ao longo dos projetos que participei, atuei frequentemente como líder de equipe, sempre mantendo uma boa comunicação e um relacionamento
+                        saudável com os demais membros.
                     </p>
                 </div>
 
@@ -155,18 +154,20 @@ export default function PortfolioScreen() {
                         <h2 className={styles.title_information}>Faculdades</h2>
                         <div className={styles.subcontainer_information}>
                             <p className={styles.paragraph_information}>Faculdade: Fatec - Faculdade de Tecnologia</p>
-                            <p className={styles.paragraph_information}>Localização: Itaquera / SP</p>
+                            <p className={styles.paragraph_information}>Localização: Itaquera/São Paulo</p>
+                            <p className={styles.paragraph_information}>Status: Concluído</p>
                             <p className={styles.paragraph_information}>Curso: Desenvolvimento de Software Multiplataforma (DSM)</p>
-                            <p className={styles.paragraph_information}>Duração: Início - Janeiro de 2023 | Término - Dezembro de 2025</p>
+                            <p className={styles.paragraph_information}>Duração: Janeiro de 2023 - Dezembro de 2025</p>
                         </div>
                     </div>
 
                     <div className={styles.work_information}>
-                        <h2 className={styles.title_information}>Experiência profissional</h2>
+                        <h2 className={styles.title_information}>Experiências profissionais</h2>
                         <div className={styles.subcontainer_information}>
                             <p className={styles.paragraph_information}>Empresa: Run Multiplataforma</p>
                             <p className={styles.paragraph_information}>Cargo: Desenvolvedor back-end (Freelancer)</p>
-                            <p className={styles.paragraph_information}>Duração: Início - Maio de 2024 | Término - Julho de 2024</p>
+                            <p className={styles.paragraph_information}>Localização: Remoto</p>
+                            <p className={styles.paragraph_information}>Duração: Janeiro de 2024 - Julho de 2024</p>
                             <p className={styles.paragraph_information}>
                                 Descrição: Desenvolvi soluções para o sistema back-end do projeto Run Multiplataforma,
                                 uma plataforma web de cursos online, usei tecnologias como Java 21, Spring Boot,
@@ -175,27 +176,39 @@ export default function PortfolioScreen() {
                                 arquitetura hexagonal.
                             </p>
                         </div>
+                        <div className={styles.subcontainer_information}>
+                            <p className={styles.paragraph_information}>Empresa: Faculdade: Fatec - Faculdade de Tecnologia</p>
+                            <p className={styles.paragraph_information}>Cargo: Desenvolvedor full-stack (Estágio)</p>
+                            <p className={styles.paragraph_information}>Localização: Itaquera/São Paulo</p>
+                            <p className={styles.paragraph_information}>Duração: Agosto de 2025 - Dezembro de 2025</p>
+                            <p className={styles.paragraph_information}>
+                                Descrição: Desenvolvi o projeto da carteirinha digital para Fatec Itaquera, construindo um site feito em
+                                React para gerenciamento da carteirinha, um aplicativo mobile em React Native com a carteirinha digital para o aluno
+                                e um back-end feito em Kotlin e Spring Boot com um banco de dados relacional PostGreSQL. Neste projeto atuei como líder
+                                de equipe.
+                            </p>
+                        </div>
                     </div>
                     <div className={styles.course_information}>
                         <h2 className={styles.title_information}>Cursos e extensões</h2>
                         <div className={styles.subcontainer_information}>
                             <p className={styles.paragraph_information}>Empresa: Stark Academy (Caraça e Nascimento Cursos LTDA)</p>
                             <p className={styles.paragraph_information}>Localização: Arujá / SP</p>
-                            <p className={styles.paragraph_information}>Duração: Início - Agosto de 2019 | Término - Junho de 2021</p>
+                            <p className={styles.paragraph_information}>Duração: Agosto de 2019 - Junho de 2021</p>
                             <p className={styles.paragraph_information}>Curso: Informática básica(Introdução, Windows e Internet) e pacote Office(Word, Excel powerpoint)</p>
                             <p className={styles.paragraph_information}>Carga horária: 78 horas</p>
                         </div>
                         <div className={styles.subcontainer_information}>
                             <p className={styles.paragraph_information}>Empresa: Curso em vídeo</p>
                             <p className={styles.paragraph_information}>Localização: Online</p>
-                            <p className={styles.paragraph_information}>Duração: Início - 6 de Setembro de 2021 | Término - 28 de Setembro de 2021</p>
+                            <p className={styles.paragraph_information}>Duração: 6 de Setembro de 2021 - 28 de Setembro de 2021</p>
                             <p className={styles.paragraph_information}>Cursos: Python3 - Mundo 1, Python3 - Mundo 2 e Python3 - Mundo 3</p>
                             <p className={styles.paragraph_information}>Carga horária: 120 horas</p>
                         </div>
                         <div className={styles.subcontainer_information}>
                             <p className={styles.paragraph_information}>Empresa: Curso em vídeo</p>
                             <p className={styles.paragraph_information}>Localização: Online</p>
-                            <p className={styles.paragraph_information}>Duração: Início - Janeiro de 2023 | Término - 28 de Março de 2023</p>
+                            <p className={styles.paragraph_information}>Duração: Janeiro de 2023 - Março de 2023</p>
                             <p className={styles.paragraph_information}>Cursos: Algoritmo, Java Básico e Java POO</p>
                             <p className={styles.paragraph_information}>Carga horária: 120 horas</p>
                         </div>

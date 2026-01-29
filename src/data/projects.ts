@@ -11,12 +11,16 @@ import {
   openLinkPI5Backend,
   openLinkPI5FrontendAdm,
   openLinkPI5FrontendClient,
+  openLinkPI6Backend,
+  openLinkPI6FrontendTenant,
+  openLinkPI6FrontendLandLord,
   pi1Images,
   pi2Images,
   pi3Images,
   pi4Images,
   pi5Images,
-} from "../modelview/PortfolioModelView";
+  pi6Images,
+} from "../viewModel/PortfolioViewModel";
 
 export const projects: Project[] = [
   {
@@ -117,6 +121,30 @@ export const projects: Project[] = [
       { text: "Ir para o repositório - back-end Bemtevi", link: openLinkPI5Backend() },
       { text: "Ir para o repositório - front-end adm Bemtevi", link: openLinkPI5FrontendAdm() },
       { text: "Ir para o repositório - front-end customer Bemtevi", link: openLinkPI5FrontendClient() },
+    ]
+  },
+  {
+    images: pi6Images,
+    title: "6° PI - Imobly",
+    description: `
+      O projeto Imobly é um sistema de gerenciamento de imóveis desenvolvido para atender locadores e locatários. O front-end foi construído 
+      para três plataformas distintas: Web, Mobile e Desktop, sendo organizado em dois repositórios independentes, um voltado ao locador e outro ao locatário.
+      O sistema permite que o locador gerencie suas propriedades, acompanhe pagamentos e reportações, além de visualizar e administrar agendamentos 
+      de visitas. Já o locatário pode visualizar imóveis disponíveis, agendar visitas e acessar informações relacionadas a contratos e pagamentos.
+      A aplicação foi hospedada utilizando serviços da AWS, garantindo escalabilidade e disponibilidade.
+    `,
+    technologies: [
+      "Kotlin", "Gradle", "Spring Boot", "Spring Security", "Java Mail Sender", "JWT",
+      "PostgreSQL", "Kotlin Multiplataform", "Compose Multiplatform", "Amazon EC2", "Amazon S3", "Ubuntu"
+    ],
+    myParticipation: `
+      O projeto foi desenvolvido numa equipe de 4 desenvolvedores, no qual eu era o Líder. Atuei implementando o back-end e fazendo o deployment
+      na AWS (EC2). Além de desenvolver algumas telas e implementar a lógica nas ViewModel.
+    `,
+    links: [
+      { text: "Ir para o repositório - back-end Imobly", link: openLinkPI6Backend() },
+      { text: "Ir para o repositório - front-end landlord Imobly", link: openLinkPI6FrontendLandLord() },
+      { text: "Ir para o repositório - front-end tenant Imobly", link: openLinkPI6FrontendTenant() },
     ]
   }
 ]
