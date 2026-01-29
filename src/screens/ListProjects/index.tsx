@@ -56,6 +56,11 @@ export function ListProjectsScreen() {
             title="5° PI - Bemtevi"
             dataScreen={projects[4]}
           />
+          <ProjectCard
+            imageUrl={`${import.meta.env.BASE_URL}assets/images/pi6/screenshot13.png`}
+            title="6° PI - Imobly"
+            dataScreen={projects[5]}
+          />
         </div>
         <Footer />
       </main>

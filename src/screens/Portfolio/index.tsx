@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/Navbar";
 import { Title } from "../../components/Title";
 import { Footer } from "../../components/Footer";
-import { openLinkGitHub, openLinkLinkedin } from "../../modelview/PortfolioModelView";
+import { openLinkGitHub, openLinkLinkedin } from "../../viewModel/PortfolioViewModel";
 import { GoHomeFill } from "react-icons/go";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FiTool, FiUser } from "react-icons/fi";
